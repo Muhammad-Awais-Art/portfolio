@@ -1,0 +1,58 @@
+section#testimonials {
+  main {
+    padding: 100px 0;
+    position: relative;
+  }
+  .testim-qoutes {
+    position: absolute;
+    top: 10%;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    margin-bottom: 3rem;
+  }
+  .reviews {
+    // margin-top: 13rem;
+    padding: 0 20vw;
+  }
+  .stars {
+    margin: 2rem 0 1rem;
+    i {
+      color: color(second);
+    }
+  }
+  .revPerson {
+    img {
+      margin: 1rem 0;
+      border-radius: 50%;
+      height: 4rem;
+      width: 4rem;
+      object-fit: cover;
+      object-position: center;
+    }
+    h4.name {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    h4.desig {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+}
+
+.brands {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    img {
+        height: 2rem;
+        width: auto;
+    }
+}

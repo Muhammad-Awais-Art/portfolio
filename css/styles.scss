@@ -1,0 +1,160 @@
+$colors: (
+    second: #fda300,
+    sect1Bg: #f1f1f1,
+    perfBg: #f7f7f7,
+);
+
+@function color($c) {
+    @return map-get($colors, $c);
+}
+
+@mixin flex($j, $a) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+}
+
+@mixin idealFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden !important;
+}
+
+// .pop {
+//   font-family: "Poppins", sans-serif;
+// }
+
+// .os {
+//   font-family: "Open Sans", sans-serif;
+// }
+
+p,.actMainMenu li {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    background-color: #f1f1f1;
+  nav {
+    min-height: 12vh;
+    @include flex(space-between, center);
+    h1 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+    }
+    span {
+        color: color(second);
+    }
+  }
+}
+
+.actMainMenu {
+    cursor: pointer;
+    margin-top: 10px;
+    list-style: none;
+    @include flex(space-between, center);
+
+    li {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        transition: all .3s ease;
+        &:hover {
+            text-decoration: underline;
+            color: rgba(0, 0, 0, 0.623);
+            // transform: scale(1.1);
+            
+        }
+    }
+}
+
+.feat-line {
+    position: relative;
+    bottom: 6px;
+    width: 37px;
+    border-top: 5px solid black;
+}
+
+.fakeMainMenu {
+    cursor: pointer;
+    height: 100vh;
+    width: 50vw;
+    background-color: rgb(66, 66, 66);
+    color: rgb(143, 143, 143);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    flex-direction: column;
+    list-style: none;
+    transform: translateX(100%);
+    @include flex(space-evenly, center);
+    li {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 28px;
+        transition: .3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.translateToShow {
+    transform: translateX(0%);
+}
+
+#burger {
+    @include flex(flex-end,flex-end);
+    div.burgerButton {
+        position: relative;
+        z-index: 99;
+        height: 25px;
+        width: auto;
+        @include flex(space-between, center);
+        flex-direction: column;
+        transition: all .5s ease;
+        .line {
+            background-color: black;
+            height: 5px;
+            width: 35px;
+            border-radius: 5px;
+        }
+    }
+    .activeButton {
+        .line {
+            background-color: rgb(143, 143, 143);
+        }
+        .l1 {
+            transform: translateY(10px) rotate(45deg);
+        }
+        .l2 {
+            opacity: 0;
+        }
+        .l3 {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+    }
+}
+
+@import "./sect-1";
+@import "./skills";
+@import "./perfect";
+@import "./works";
+@import "./testi";

@@ -1,0 +1,31 @@
+section#perfect {
+    padding: 113px 0;
+    background-color: color(perfBg);
+    h3 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 50px;
+    }
+    span {
+        color: color(second);
+    }
+    .perfect-text {
+        padding: (167px-113px) 0;
+    }
+
+    .perfect-features {
+        padding-right: 8vw;
+        p {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            line-height: 28px;
+        }
+        
+        h4 {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+}

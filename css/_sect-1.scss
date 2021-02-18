@@ -1,0 +1,27 @@
+section#sect-1 {
+    background-color: color(sect1Bg);
+    height: auto;
+    overflow: hidden;
+    h2 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 44px
+    }
+}
+.sect-1-img {
+    @include flex(flex-end, flex-end);
+    img {
+        height: 550px;
+        width: auto;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+.actualSect1 {
+    height: 35rem;
+    p {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
