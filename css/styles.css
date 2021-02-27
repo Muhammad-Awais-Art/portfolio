@@ -6,8 +6,14 @@
 }
 
 body {
+  width: 100%;
+}
+
+.bodyClone {
   width: 100vw;
-  overflow-x: hidden !important;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
 }
 
 p, .actMainMenu li {
