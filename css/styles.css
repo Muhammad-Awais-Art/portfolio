@@ -22,9 +22,6 @@ p, .actMainMenu li {
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   background-color: #f1f1f1;
 }
 
@@ -49,6 +46,11 @@ header nav h1 {
 
 header nav span {
   color: #fda300;
+}
+
+header .main {
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .actMainMenu {
