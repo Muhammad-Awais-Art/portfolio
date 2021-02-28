@@ -53,7 +53,6 @@ p,.actMainMenu li {
 header {
     position: sticky;
     top: 0;
-    z-index: 9;
     background-color: #f1f1f1;
   nav {
     min-height: 12vh;
@@ -98,13 +97,12 @@ header {
 .fakeMainMenu {
     cursor: pointer;
     height: 100vh;
-    width: 50vw;
+    width: 100vw;
     background-color: rgb(66, 66, 66);
     color: rgb(143, 143, 143);
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 10;
     flex-direction: column;
     list-style: none;
     transform: translateX(100%);
@@ -129,21 +127,21 @@ header {
 #burger {
     @include flex(flex-end,flex-end);
     div.burgerButton {
+        z-index: 100;
         position: relative;
-        z-index: 99;
         height: 25px;
         width: auto;
         @include flex(space-between, center);
         flex-direction: column;
-        transition: all .5s ease;
         .line {
+            transition: all .5s ease;
             background-color: black;
             height: 5px;
             width: 35px;
             border-radius: 5px;
         }
     }
-    .activeButton {
+    div.activeButton {
         .line {
             background-color: rgb(143, 143, 143);
         }

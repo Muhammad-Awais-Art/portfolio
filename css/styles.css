@@ -25,7 +25,6 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 9;
   background-color: #f1f1f1;
 }
 
@@ -89,13 +88,12 @@ header nav span {
 .fakeMainMenu {
   cursor: pointer;
   height: 100vh;
-  width: 50vw;
+  width: 100vw;
   background-color: #424242;
   color: #8f8f8f;
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 10;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -146,8 +144,8 @@ header nav span {
 }
 
 #burger div.burgerButton {
+  z-index: 100;
   position: relative;
-  z-index: 99;
   height: 25px;
   width: auto;
   display: -webkit-box;
@@ -163,31 +161,31 @@ header nav span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
 }
 
 #burger div.burgerButton .line {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
   background-color: black;
   height: 5px;
   width: 35px;
   border-radius: 5px;
 }
 
-#burger .activeButton .line {
+#burger div.activeButton .line {
   background-color: #8f8f8f;
 }
 
-#burger .activeButton .l1 {
+#burger div.activeButton .l1 {
   -webkit-transform: translateY(10px) rotate(45deg);
           transform: translateY(10px) rotate(45deg);
 }
 
-#burger .activeButton .l2 {
+#burger div.activeButton .l2 {
   opacity: 0;
 }
 
-#burger .activeButton .l3 {
+#burger div.activeButton .l3 {
   -webkit-transform: translateY(-10px) rotate(-45deg);
           transform: translateY(-10px) rotate(-45deg);
 }
