@@ -48,11 +48,6 @@ header nav span {
   color: #fda300;
 }
 
-header .main {
-  position: -webkit-sticky;
-  position: sticky;
-}
-
 .actMainMenu {
   cursor: pointer;
   margin-top: 10px;
@@ -91,9 +86,9 @@ header .main {
   cursor: pointer;
   height: 100vh;
   width: 100vw;
-  background-color: #424242;
+  background-color: white;
   color: #8f8f8f;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   -webkit-box-orient: vertical;
@@ -103,6 +98,8 @@ header .main {
   list-style: none;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.308);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.308);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,7 +115,7 @@ header .main {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 20px;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
@@ -148,7 +145,7 @@ header .main {
 #burger div.burgerButton {
   z-index: 100;
   position: relative;
-  height: 25px;
+  height: 20px;
   width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,8 +166,8 @@ header .main {
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
   background-color: black;
-  height: 5px;
-  width: 35px;
+  height: 3px;
+  width: 25px;
   border-radius: 5px;
 }
 
@@ -179,8 +176,8 @@ header .main {
 }
 
 #burger div.activeButton .l1 {
-  -webkit-transform: translateY(10px) rotate(45deg);
-          transform: translateY(10px) rotate(45deg);
+  -webkit-transform: translateY(9px) rotate(-45deg);
+          transform: translateY(9px) rotate(-45deg);
 }
 
 #burger div.activeButton .l2 {
@@ -188,8 +185,8 @@ header .main {
 }
 
 #burger div.activeButton .l3 {
-  -webkit-transform: translateY(-10px) rotate(-45deg);
-          transform: translateY(-10px) rotate(-45deg);
+  -webkit-transform: translateY(-9px) rotate(45deg);
+          transform: translateY(-9px) rotate(45deg);
 }
 
 section#sect-1 {

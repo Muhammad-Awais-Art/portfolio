@@ -1,16 +1,25 @@
-var burgerButton = document.querySelector(".burgerButton");
-var fakeMainMenu = document.querySelector(".fakeMainMenu");
-var header = document.querySelector('header .main');
-var pageScroll = 0
-fakeMainMenu.style.transition = '.5s ease';
-burgerButton.style.transition = ".6s ease";
+// var header = document.querySelector('header .main');
+// var pageScroll = 0
+(function() {
+    var burgerButton = document.querySelector(".burgerButton");
+    var fakeMainMenu = document.querySelector(".fakeMainMenu");
+    var bodyClone = document.querySelector(".bodyClone");
+    fakeMainMenu.style.transition = '.5s ease';
+    
+    burgerButton.addEventListener('click', function () {
+        burgerButton.classList.toggle('activeButton');
+        fakeMainMenu.classList.toggle('translateToShow');
+        // bodyClone.style.overflow = "hidden";
+        if (bodyClone.style.overflow == "hidden") {
+            bodyClone.style.overflow = "visible";
+            bodyClone.style.overflowX = "hidden";
+        } else if (bodyClone.style.overflowX == "hidden") {
+            bodyClone.style.overflowX = "visible";
+            bodyClone.style.overflow = "hidden";
+        }
+    });
+})();
 
-burgerButton.addEventListener('click', function () {
-    burgerButton.classList.toggle('activeButton');
-
-    // fakeMainMenu.style.transform = 'translateX(0%)';
-    fakeMainMenu.classList.toggle('translateToShow');
-});
 
 // document.addEventListener('scroll', function(){
 //     // pageScroll = pageYOffset;
