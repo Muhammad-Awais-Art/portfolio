@@ -1,163 +1,110 @@
-$colors: (
-    second: #fda300,
-    sect1Bg: #f1f1f1,
-    perfBg: #f7f7f7,
-);
+@import "./globals";
 
-@function color($c) {
-    @return map-get($colors, $c);
-}
-
-@mixin flex($j, $a) {
-  display: flex;
-  justify-content: $j;
-  align-items: $a;
-}
-
-@mixin idealFlex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-    width: 100%;
-}
-
-.bodyClone {
-    width: 100vw;
-    height: auto;
-    overflow-x: hidden;
-    position: relative;
-}
-
-// .pop {
-//   font-family: "Poppins", sans-serif;
-// }
-
-// .os {
-//   font-family: "Open Sans", sans-serif;
-// }
-
-p,.actMainMenu li {
-    font-size: 14px;
-    line-height: 24px;
+.translateToShow {
+  transform: translateX(0%) !important;
 }
 
 header {
-    // position: fixed;
-    // top: 0;
-    background-color: #f1f1f1;
+  background-color: color(sect1Bg);
+  position: fixed;
+  top: 0;
+  z-index: 100;
   nav {
-    min-height: 12vh;
     @include flex(space-between, center);
+    min-height: 4rem;
     h1 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-size: 32px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 32px;
     }
     span {
-        color: color(second);
+      color: color(second);
     }
   }
-}
-
-.actMainMenu {
-    cursor: pointer;
+  //   MENUE STYLing
+  .actMainMenu {
+    width: 50%;
     margin-top: 10px;
     list-style: none;
     @include flex(space-between, center);
 
     li {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        transition: all .3s ease;
-        &:hover {
-            text-decoration: underline;
-            color: rgba(0, 0, 0, 0.623);
-            // transform: scale(1.1);
-            
-        }
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      &:hover {
+        text-decoration: underline;
+        color: rgba(0, 0, 0, 0.623);
+      }
     }
-}
-
-.feat-line {
-    position: relative;
-    bottom: 6px;
-    width: 37px;
-    border-top: 5px solid black;
-}
-
-.fakeMainMenu {
-    cursor: pointer;
-    height: 100vh;
-    width: 100vw;
-    background-color: white;
-    color: rgb(143, 143, 143);
-    position: fixed;
-    top: 0;
-    right: 0;
-    flex-direction: column;
-    list-style: none;
-    transform: translateX(100%);
-    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.308);
-    @include flex(space-evenly, center);
-    li {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        text-transform: uppercase;
-        font-size: 20px;
-        transition: .3s ease;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-}
-
-.translateToShow {
-    transform: translateX(0%);
+  }
 }
 
 #burger {
-    @include flex(flex-end,flex-end);
-    div.burgerButton {
-        z-index: 100;
-        position: relative;
-        height: 20px;
-        width: auto;
-        @include flex(space-between, center);
-        flex-direction: column;
-        .line {
-            transition: all .5s ease;
-            background-color: black;
-            height: 3px;
-            width: 25px;
-            border-radius: 5px;
-        }
+  @include flex(flex-end, flex-end);
+  display: none;
+  div.burgerButton {
+    position: relative;
+    z-index: 99;
+    height: 25px;
+    width: auto;
+    @include flex(space-between, center);
+    flex-direction: column;
+    .line {
+      transition: 0.5s all ease;
+      background-color: black;
+      height: 3px;
+      width: 30px;
+      border-radius: 5px;
     }
-    div.activeButton {
-        .line {
-            background-color: rgb(143, 143, 143);
-        }
-        .l1 {
-            transform: translateY(9px) rotate(-45deg);
-        }
-        .l2 {
-            opacity: 0;
-        }
-        .l3 {
-            transform: translateY(-9px) rotate(45deg);
-        }
+  }
+  .activeButton {
+    .line {
+      background-color: rgb(143, 143, 143);
     }
+    .l1 {
+      transform: translateY(11px) rotate(9 * (-45deg));
+    }
+    .l2 {
+      opacity: 0;
+    }
+    .l3 {
+      transform: translateY(-11px) rotate(45deg);
+    }
+  }
+}
+// // THIS SECTION MEDIA QURIES
+@media (max-width: 767px) {
+  header {
+    .actMainMenu {
+      transform: translateX(100%);
+      transition: 0.5s all ease;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      @include flex(space-evenly, center);
+      flex-direction: column;
+      z-index: 80;
+      background-color: white;
+      margin-top: 0;
+      li {
+        display: block;
+        text-align: center;
+        width: 100vw;
+        font-size: 20px;
+        transform: translateX(100%);
+      }
+    }
+  }
+  #burger {
+    display: flex;
+  }
 }
 
+// OTHER SECTIONS IMPORTS
 @import "./sect-1";
 @import "./skills";
 @import "./perfect";

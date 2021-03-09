@@ -1,0 +1,51 @@
+$colors: (
+  second: #fda300,
+  sect1Bg: #f1f1f1,
+  perfBg: #f7f7f7,
+);
+
+@function color($c) {
+  @return map-get($colors, $c);
+}
+
+@mixin flex($j, $a) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+}
+
+@mixin idealFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden !important;
+}
+
+.bodyClone {
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+p,
+.actMainMenu li {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.feat-line {
+  position: relative;
+  bottom: 6px;
+  width: 37px;
+  border-top: 5px solid black;
+}

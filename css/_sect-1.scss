@@ -1,27 +1,54 @@
 section#sect-1 {
-    background-color: color(sect1Bg);
-    height: auto;
-    overflow: hidden;
-    h2 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-size: 44px
-    }
+  margin-top: 4rem !important;
+  background-color: color(sect1Bg);
+  height: auto;
+  overflow: hidden;
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 44px;
+  }
 }
 .sect-1-img {
-    @include flex(flex-end, flex-end);
-    img {
-        height: 550px;
-        width: auto;
-        max-width: 100%;
-        object-fit: cover;
-    }
+  @include flex(flex-end, flex-end);
+  img {
+    height: 550px;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+  }
 }
 .actualSect1 {
-    height: 35rem;
-    p {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 400;
-        font-size: 14px;
+  height: 35rem;
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  section#sect-1 {
+    height: 50rem;
+  }
+
+  .sect-1-text {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    h2 {
+      font-size: 36px !important;
+      margin: 0 auto 2rem;
     }
+  }
+  .sect-1-img {
+    padding: 0 2rem;
+    @include idealFlex;
+    img {
+      height: 550px;
+      max-width: 95vw !important;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
 }

@@ -37,61 +37,44 @@
   </head>
   <body>
     <div class="bodyClone">
-      <section class="headerSection">
-        <header>
-          <main class="container">
-            <nav class="row">
-              <div class="logo col-7">
-                <h1>Awais<span>.</span></h1>
-              </div>
-              <ul class="col-5 actMainMenu d-none d-lg-flex">
-                <li>Home</li>
-                <li>Work</li>
-                <li>Services</li>
-                <li>About</li>
-                <li>Contact</li>
-              </ul>
-              <div id="burger" class="col-5 d-flex d-lg-none">
-                <div class="burgerButton">
-                  <div class="line l1"></div>
-                  <div class="line l2"></div>
-                  <div class="line l3"></div>
-                </div>
-              </div>
-            </nav>
-          </main>
-          <section class="p-0 m-0" id="sect-1">
-            <main class="container">
-              <div class="row actualSect1">
-                <div
-                  class="col-lg-6 col-md-5 d-flex justify-content-center flex-column align-items-start sect-1-text"
-                >
-                  <h2 class="mb-4">
-                    I'm Muhammad Awais<br />A Graphic Designer.
-                  </h2>
-                  <!-- <p>
-                  I’m a portrait, fashion and lifestyle photographer living In New
-                  York City. During my thirteen year tenure here.
-                </p> -->
-                  <p>
-                    I’m a beauty retoucher, Ad designer and digital artist
-                    living In Lahore, Pakistan. During my five year tenure here.
-                  </p>
-                </div>
-                <div class="col-lg-6 col-md-7 sect-1-img p-0 m-0">
-                  <img src="./images/thinking man.png" alt="man thinking" />
-                </div>
-              </div>
-            </main>
-          </section>
-          <ul class="fakeMainMenu">
+      <header class="container-fluid">
+        <nav class="container">
+          <div class="logo">
+            <h1>Awais<span>.</span></h1>
+          </div>
+          <ul class="actMainMenu">
             <li>Home</li>
             <li>Work</li>
             <li>Services</li>
             <li>About</li>
             <li>Contact</li>
           </ul>
-        </header>
+          <div id="burger">
+            <div class="burgerButton">
+              <div class="line l1"></div>
+              <div class="line l2"></div>
+              <div class="line l3"></div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section class="p-0 m-0" id="sect-1">
+        <main class="container">
+          <div class="row actualSect1">
+            <div
+              class="col-lg-6 col-md-5 d-flex justify-content-center flex-column align-items-start sect-1-text"
+            >
+              <h2>I'm Muhammad Awais<br />a Graphics Designer.</h2>
+              <p>
+                I’m a beauty retoucher, Ad designer and digital artist living In
+                Lahore, Pakistan. During my five year tenure here.
+              </p>
+            </div>
+            <div class="col-lg-6 col-md-7 sect-1-img p-0 m-0">
+              <img src="./images/thinking man.png" alt="man thinking" />
+            </div>
+          </div>
+        </main>
       </section>
       <section id="skills">
         <main class="container">
@@ -127,12 +110,12 @@
         </main>
       </section>
       <section id="perfect">
-        <main class="container px-5">
+        <main class="container">
           <div class="row px-2">
             <div class="col-lg-6 perfect-text">
               <h3>I KNOW YOU<br />NEED <span>PERFECT.</span></h3>
               <div class="perfect-features container-fluid mt-5">
-                <div class="row">
+                <div class="row feat-wrap">
                   <div class="col-1 my-3 feat-line"></div>
                   <div class="col-11 mb-3">
                     <h4 class="pb-1">Quality Every Time</h4>
@@ -142,7 +125,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row feat-wrap">
                   <div class="col-1 my-3 feat-line"></div>
                   <div class="col-11 mb-3">
                     <h4 class="pb-1">Quality Every Time</h4>
@@ -152,7 +135,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row feat-wrap">
                   <div class="col-1 my-3 feat-line"></div>
                   <div class="col-11 mb-3">
                     <h4 class="pb-1">Quality Every Time</h4>
@@ -175,38 +158,62 @@
         </main>
       </section>
       <section class="container-fluid p-0" id="works">
-        <div class="row">
-          <img
-            src="./images/Enamel-Mug-PSD-MockUp.png"
-            alt="mug images"
-            class="col-lg-4 col-md-6"
-          />
-          <img
-            src="./images/Branding-Identity-Mockup.png"
-            alt="paper and stuff"
-            class="col-lg-4 col-md-6"
-          />
-          <img
-            src="./images/Branding-Identity-Mock-Up-Vol4.png"
-            alt="pink branding"
-            class="col-lg-4 col-md-6"
-          />
-          <img
-            src="./images/Juice-Bottle-Packaging-MockUp.png"
-            alt="juice bottle"
-            class="col-lg-4 col-md-6"
-          />
-          <img
-            src="./images/Open-Face-Motorcycle-Helmet-Mockup.png"
-            alt="green open face helmet"
-            class="col-lg-4 col-md-6"
-          />
-          <img
-            src="./images/01-Cosmetics-free-mockup-by-mockupcloud.png"
-            alt=""
-            class="col-lg-4 col-md-6"
-          />
-        </div>
+        <main class="container">
+          <h3 class="myWorks">MY <span>WORKS.</span></h3>
+          <div class="rowRa">
+            <div>
+              <img src="./images/Enamel-Mug-PSD-MockUp.png" alt="mug images" />
+              <div class="work-image-overlay">
+                <h4>Retouching</h4>
+              </div>
+            </div>
+            <div>
+              <img
+                src="./images/Branding-Identity-Mockup.png"
+                alt="paper and stuff"
+              />
+              <div class="work-image-overlay">
+                <h4>Retouching</h4>
+              </div>
+            </div>
+            <div>
+              <img
+                src="./images/Branding-Identity-Mock-Up-Vol4.png"
+                alt="pink branding"
+              />
+              <div class="work-image-overlay">
+                <h4>Retouching</h4>
+              </div>
+            </div>
+            <div>
+              <img
+                src="./images/Juice-Bottle-Packaging-MockUp.png"
+                alt="juice bottle"
+              />
+              <div class="work-image-overlay">
+                <h4>Retouching</h4>
+              </div>
+            </div>
+            <div>
+              <img
+                src="./images/Open-Face-Motorcycle-Helmet-Mockup.png"
+                alt="green open face helmet"
+              />
+              <div class="work-image-overlay">
+                <h4>Retouching</h4>
+              </div>
+            </div>
+            <div>
+              <img
+                src="./images/01-Cosmetics-free-mockup-by-mockupcloud.png"
+                alt=""
+              />
+              <div class="work-image-overlay">
+                <h4>Retouching</h4>
+              </div>
+            </div>
+          </div>
+        </main>
       </section>
       <section id="testimonials">
         <main class="container-fluid text-center">
@@ -269,17 +276,11 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                   </div>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Doloremque esse facere quam est eum? Culpa minus facere
-                    rerum reiciendis et sit nisi laboriosam iure adipisci, totam
-                    sint perspiciatis harum eveniet vero maiores quasi aliquid
-                    voluptate debitis, porro tempora necessitatibus accusamus?
-                  </p>
+                  <p>I belive you were blushing MR. Big Artist!</p>
                   <div class="revPerson">
-                    <img src="./images/blondy.png" alt="review person image" />
-                    <h4 class="name text-dark">Svetlin Denkov</h4>
-                    <h4 class="desig text-muted">Senior Designer</h4>
+                    <img src="./images/new me.jpg" alt="review person image" />
+                    <h4 class="name text-dark">Ahmad Hassan</h4>
+                    <h4 class="desig text-muted">Senior Developer</h4>
                   </div>
                 </div>
               </div>
@@ -293,22 +294,19 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                   </div>
                   <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Doloremque esse facere quam est eum? Culpa minus facere
-                    rerum reiciendis et sit nisi laboriosam iure adipisci, totam
-                    sint perspiciatis harum eveniet vero maiores quasi aliquid
-                    voluptate debitis, porro tempora necessitatibus accusamus?
+                    Ye Humari car h, ye hum hain or ye humari party ho rai h...
+                    oooooooooo aja party krtay hain...ooo!!!
                   </p>
                   <div class="revPerson">
                     <img src="./images/blondy.png" alt="review person image" />
-                    <h4 class="name text-dark">Svetlin Denkov</h4>
-                    <h4 class="desig text-muted">Senior Designer</h4>
+                    <h4 class="name text-dark">Double Shah</h4>
+                    <h4 class="desig text-muted">Senior AF</h4>
                   </div>
                 </div>
               </div>
             </div>
             <a
-              class="carousel-control-prev btn-light"
+              class="carousel-control-prev btn-dark"
               href="#carouselExampleControls"
               role="button"
               data-slide="prev"
@@ -320,7 +318,7 @@
               <span class="sr-only">Previous</span>
             </a>
             <a
-              class="carousel-control-next btn-light"
+              class="carousel-control-next btn-dark"
               href="#carouselExampleControls"
               role="button"
               data-slide="next"
