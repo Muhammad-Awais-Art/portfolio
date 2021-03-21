@@ -122,6 +122,27 @@ header {
   }
 }
 
+.upper {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.52);
+  @include idealFlex;
+  display: none;
+  a {
+    position: relative;
+    bottom: 0.2rem;
+  }
+  i {
+    color: black;
+    font-size: 1.5rem;
+  }
+}
+
 // OTHER SECTIONS IMPORTS
 @import "./sect-1";
 @import "./skills";

@@ -3,6 +3,8 @@ var actMainMenu = document.querySelector(".actMainMenu");
 var header = document.querySelector('header');
 var menueItem = document.querySelectorAll('.actMainMenu li');
 var pageScroll = 0;
+var scrlBTN = document.querySelector(".upper");
+
 burgerButton.style.transition = ".6s ease";
 
 burgerButton.addEventListener('click', function () {
@@ -66,3 +68,13 @@ var brandingRedirect = (function () {
 })();
 
 brandingRedirect.eventReuser();
+
+
+document.addEventListener("scroll", function () {
+    scrlBTN.style.transition = "0.5s ease";
+    if (pageYOffset > 100) {
+        scrlBTN.style.display = "flex";
+    } else {
+        scrlBTN.style.display = "none";
+    }
+});
