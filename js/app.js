@@ -33,3 +33,36 @@ document.addEventListener('scroll', function () {
         header.style.boxShadow = '0 0 0 #b7b7b7';
     }
 });
+
+var brandingRedirect = (function () {
+
+    var DOM = {
+        branding: ".branding",
+        brandingLoc: "./branding.html",
+        vArt: ".v-art",
+        vArtLoc: "./v-art.html",
+        psWork: ".ps-work",
+        psWorkLoc: "./ps-work.html",
+        home: "./index.html",
+        logo: ".logo",
+    };
+    var eventInvocation = function (strCase, locationStr) {
+
+        function redirect() {
+            location.href = locationStr;
+        }
+
+        document.querySelector(strCase).addEventListener("click", redirect);
+    };
+
+    return {
+        eventReuser: function () {
+            eventInvocation(DOM.branding, DOM.brandingLoc);
+            eventInvocation(DOM.vArt, DOM.vArtLoc);
+            eventInvocation(DOM.psWork, DOM.psWorkLoc);
+            eventInvocation(DOM.logo, DOM.home);
+        },
+    }
+})();
+
+brandingRedirect.eventReuser();

@@ -54,7 +54,12 @@ header nav {
   min-height: 4rem;
 }
 
+header nav .logo {
+  cursor: pointer;
+}
+
 header nav h1 {
+  pointer-events: none;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 32px;
@@ -87,7 +92,11 @@ header .actMainMenu li {
   transition: all 0.3s ease;
 }
 
-header .actMainMenu li:hover {
+header .actMainMenu li a {
+  color: black;
+}
+
+header .actMainMenu li a:hover {
   text-decoration: underline;
   color: rgba(0, 0, 0, 0.623);
 }
@@ -187,6 +196,16 @@ header .actMainMenu li:hover {
     font-size: 20px;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
+  }
+  header .actMainMenu li a {
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  header .actMainMenu li a:hover {
+    text-decoration: none;
+  }
+  header .actMainMenu li:hover a {
+    letter-spacing: 0.2rem;
   }
   #burger {
     display: -webkit-box;

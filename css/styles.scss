@@ -12,7 +12,11 @@ header {
   nav {
     @include flex(space-between, center);
     min-height: 4rem;
+    .logo {
+      cursor: pointer;
+    }
     h1 {
+      pointer-events: none;
       font-family: "Poppins", sans-serif;
       font-weight: 700;
       font-size: 32px;
@@ -33,9 +37,12 @@ header {
       font-family: "Poppins", sans-serif;
       font-weight: 500;
       transition: all 0.3s ease;
-      &:hover {
-        text-decoration: underline;
-        color: rgba(0, 0, 0, 0.623);
+      a {
+        color: black;
+        &:hover {
+          text-decoration: underline;
+          color: rgba(0, 0, 0, 0.623);
+        }
       }
     }
   }
@@ -96,6 +103,17 @@ header {
         width: 100vw;
         font-size: 20px;
         transform: translateX(100%);
+        a {
+          transition: 0.3s ease;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        &:hover {
+          a {
+            letter-spacing: 0.2rem;
+          }
+        }
       }
     }
   }
