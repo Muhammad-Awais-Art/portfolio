@@ -23,7 +23,7 @@ document.addEventListener('scroll', function () {
         pageScroll = pageYOffset;
         header.style.boxShadow = '0 0 1rem #b7b7b7';
     } else if (pageScroll > pageYOffset) {
-        header.style.backgroundColor = 'white';
+        // header.style.backgroundColor = 'white';
         header.style.boxShadow = '0 0 1rem #b7b7b7';
         pageScroll = pageYOffset;
     }
