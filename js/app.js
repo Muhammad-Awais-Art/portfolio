@@ -57,9 +57,9 @@ var brandingRedirect = (function () {
 
     return {
         eventReuser: function () {
-            eventInvocation(DOM.branding, DOM.brandingLoc);
-            eventInvocation(DOM.vArt, DOM.vArtLoc);
-            eventInvocation(DOM.psWork, DOM.psWorkLoc);
+            // eventInvocation(DOM.branding, DOM.brandingLoc);
+            // eventInvocation(DOM.vArt, DOM.vArtLoc);
+            // eventInvocation(DOM.psWork, DOM.psWorkLoc);
             eventInvocation(DOM.logo, DOM.home);
         },
     }
