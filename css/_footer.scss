@@ -1,4 +1,5 @@
 footer {
+  border-top: 0.5rem solid rgb(98, 98, 98);
   .social {
     @include idealFlex;
     flex-wrap: wrap;
@@ -7,14 +8,48 @@ footer {
   .icons {
     height: 2.5rem;
     width: 2.5rem;
+    transition: 0.1s ease;
+    background: white;
     margin: 0.5rem;
     border-radius: 50%;
+    color: rgb(17, 17, 17);
     @include idealFlex;
     i {
       font-size: 1.3rem;
     }
     &:hover {
-      background-color: black;
+      transform: scale(1.3);
+      background: rgb(90, 90, 90);
+      color: white;
+    }
+  }
+  .links {
+    margin: 1rem auto;
+    @include idealFlex;
+    flex-wrap: wrap;
+    list-style: none;
+    li {
+      opacity: 0.8;
+      transition: 0.1s ease;
+      a {
+        color: white;
+        margin: 0 1.5rem;
+        text-decoration: none;
+      }
+      &:hover {
+        transform: scale(1.3);
+        opacity: 1;
+      }
+    }
+  }
+
+  .copyright {
+    p {
+      text-align: center;
+      font-size: 1rem;
+      color: white;
+      opacity: 0.4;
+      margin-top: 3rem;
     }
   }
 }

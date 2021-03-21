@@ -11,7 +11,7 @@ burgerButton.addEventListener('click', function () {
     menueItem.forEach(function (name, id) {
         name.style.transition = `${(id * 0.25) + .1}s all ease`;
         name.classList.toggle('translateToShow')
-        console.log(name);
+        // console.log(name);
     });
 });
 

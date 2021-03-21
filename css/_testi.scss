@@ -49,9 +49,13 @@ section#testimonials {
 }
 
 .brands {
+  // @include flex(space-between, center);
+  @include idealFlex;
   margin-top: 5rem;
+  flex-wrap: wrap;
   img {
     height: 2rem;
     width: auto;
+    margin: 1.5rem 3.5vw;
   }
 }
